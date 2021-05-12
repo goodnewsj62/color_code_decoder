@@ -1,0 +1,152 @@
+:root{
+    --primary-color: #fff;
+    --box-color: #d9d9d8;
+    --secondary-color:#0d912c;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: auto;
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 3rem;
+}
+
+.header{
+    margin: 2rem 0 0rem 0rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    color: #0d912c ;
+}
+
+.resistor{
+    display: flex;
+    min-height: 150px;
+    margin-bottom: 3rem;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+.value{
+    height: 20px;
+    width: 150px;
+    position: absolute;
+    top:130px;
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+.leg-one,.leg-two{
+    height: 10px;
+    width: 40px;
+    background-color: silver;
+}
+.body{
+    height: 30px;
+    width: 100px;
+    border: 1px solid green;
+    background-color: #fcf2a5;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.body > div{
+    width: 4px;
+}
+
+
+.main{
+    min-height: 200px;
+    background-color: var(--box-color);
+    box-shadow:  1.95px 1.95px 2.6px rgba(0, 0, 0, 0.3);
+    padding: 16px;
+}
+.colors{
+    min-height: 20px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    
+}
+
+.colors > div{
+    border: 1px solid green;
+    width: 80px;
+}
+
+
+.main form{
+    display: flex ;
+    flex-direction: column;
+}
+.select{
+    display: flex;
+    justify-content: space-evenly;
+}
+.select > select{
+    width: 80px;
+    height: 25px;
+}
+
+.button{
+    margin-top: 30px ;
+    display: flex;
+    justify-content: center;
+}
+.button > button{
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.button > button:hover{
+    background-color: #1eb341;
+}
+.button > button:active{
+    background-color: #0b5e1e;
+}
+
+@media screen and (max-width:600px) {
+    .container{
+        padding: 3rem 0 ;
+    }
+    .header  p{
+        margin: 0 8px;
+        text-align: center;
+    }
+    .main {
+        margin: 0 0.5rem;
+    }
+    .select > select{
+        width: 50px;
+        height: 25px;
+    }
+    .colors > div{
+        border: 1px solid green;
+        width: 52px;
+    }
+}
+@media screen and (min-width:960px) {
+    .main{
+        width: 750px;
+        align-self: center;
+    }
+
+}
